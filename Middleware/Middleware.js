@@ -31,6 +31,19 @@ export const authMiddleware = async (req,res,next) => {
     }
 }
 
+/* export const adminMiddleware = (req, res, next) => {
+  if (req.user?.role !== "Admin") {
+    return res.status(403).json({ message: "Access denied" });
+  }
+  next();
+}; */
+
+
+
+
+
+
+
 
 export const adminMiddleware = async (req,res,next) =>{
     const token = req.header("Authorization");
